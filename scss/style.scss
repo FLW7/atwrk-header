@@ -1,0 +1,121 @@
+@import 'header_upper';
+@import 'header_lower';
+@import 'locationModal';
+@import 'servicesModal';
+@import 'notify';
+@import 'calendar';
+@import 'ads';
+@import 'profile';
+@import 'category';
+@import 'input';
+@import 'place';
+@import 'switchModal';
+
+.closed {
+  display: none;
+}
+
+body {
+  background-color: white;
+}
+
+.heads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
+}
+
+.heads-wrapper {
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  justify-content: center;
+  transition: all .5s ease;
+  background: var(--gray-200);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--gray-400);
+}
+
+.heads-wrapper.scroll-header-fix {
+  top: -51px;
+  opacity: 1;
+}
+
+@media screen and (max-width: 1220px) {
+  .heads {
+    min-width: 768px !important;
+  }
+
+  .upper-left {
+    margin-right: 0px;
+  }
+
+  .nav-elem-left {
+    display: none;
+  }
+
+  .category-btn-min {
+    width: 42px;
+    height: 36px;
+    margin-right: 16px;
+    display: flex;
+
+    &::before {
+      margin-right: 0;
+    }
+  }
+
+  .input-background {
+    width: 333px;
+
+    .category-list.header-element__arrow {
+      left: 98px;
+      display: none;
+    }
+
+    .input__category-list {
+      justify-content: center;
+    }
+  }
+
+  .pic-container.customer,
+  .pic-container.applicant,
+  .pic-container.employer,
+  .pic-container.employee,
+  .pic-container.applicant,
+  .pic-container.seller,
+  .pic-container.buyer,
+  .pic-container.services-img {
+    display: none;
+  }
+
+  .logo {
+    margin-right: 16px;
+  }
+
+
+  .category-input {
+    width: 130px;
+  }
+
+  .input-controls .input-clean {
+    margin-right: 5px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .category-modal {
+    justify-content: start;
+  }
+
+  .mr50 {
+    margin-right: 20px;
+  }
+
+  .second {
+    margin-right: 0;
+  }
+}

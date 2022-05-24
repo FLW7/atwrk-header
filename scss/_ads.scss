@@ -1,0 +1,83 @@
+.label-ads {
+  margin-right: 5px;
+}
+
+.ads-wrapper1 {
+  &:hover {
+    .ads-modal-wrapper {
+      top: 20px;
+      opacity: 1;
+      pointer-events: unset;
+    }
+  }
+}
+
+.ads-modal-wrapper {
+  position: absolute;
+  pointer-events: none;
+  transition: .25s ease;
+  opacity: 0;
+  top: 10px;
+  right: 0;
+  padding-top: 14px;
+  z-index: 20024;
+}
+
+.ads-modal {
+  width: 230px;
+  background: var(--white);
+  padding: 8px;
+  border-radius: 6px;
+  box-shadow: 10px 9px 40px rgba(109, 133, 152, 0.2);
+}
+
+.ad-case {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 44px;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+
+  .ad-case-title {
+    display: flex;
+    align-items: center;
+
+    p {
+      margin-left: 11px;
+    }
+  }
+
+  span {
+    color: var(--gray-800);
+  }
+}
+
+.hover-blue {
+  &:hover {
+    color: var(--blue-900);
+    background: var(--gray-200);
+  }
+}
+
+.hover-orange {
+  &:hover {
+    color: var(--orange-800);
+    background: var(--orange-200);
+  }
+}
+
+.hover-red {
+  &:hover {
+    color: var(--red-500);
+    background: var(--red-100);
+  }
+}
+
+.hover-purple {
+  &:hover {
+    color: var(--purple-700);
+    background: var(--purple-200);
+  }
+}

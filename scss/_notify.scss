@@ -1,0 +1,162 @@
+.notify-wrapper {
+  &:hover {
+    .notify-modal-wrapper {
+      opacity: 1;
+      top: 20px;
+      pointer-events: unset;
+    }
+  }
+}
+
+.notify.active {
+  position: relative;
+  opacity: 1 !important;
+
+  .notify-counter {
+    content: '';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 7px;
+    bottom: 8px;
+    min-width: 23px;
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 500;
+    color: white;
+    background-color: var(--red-500);
+    border-radius: 8px;
+    padding: 1px 4px;
+  }
+}
+
+.notify-counter {
+  display: none;
+}
+
+.notify-modal-header {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.notify-modal-wrapper {
+  position: absolute;
+  pointer-events: none;
+  transition: .25s ease;
+  opacity: 0;
+  top: 10px;
+  left: 0;
+  padding-top: 15px;
+  z-index: 20022;
+}
+
+.notify-modal {
+  width: 414px;
+  height: auto;
+  background: var(--white);
+  border-radius: 6px;
+  padding: 20px 16px;
+  box-shadow: 10px 9px 40px rgba(109, 133, 152, 0.2);
+
+  h2 {
+    color: var(--gray-850);
+  }
+}
+
+.notify-item {
+  display: flex;
+  align-items: center;
+  white-space: normal;
+  position: relative;
+  padding: 10px 28px;
+  border-radius: 6px;
+  cursor: pointer;
+
+  .notify-item-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 12px;
+    line-height: 14px;
+
+    color: black;
+
+    p {
+      position: relative;
+
+      &::before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: var(--emerald-300);
+        left: -18px;
+        border-radius: 50%;
+        position: absolute;
+      }
+    }
+
+    span {
+      margin-top: 5px;
+    }
+  }
+
+  &:hover {
+    background: var(--gray-150);
+
+    .notify-message {
+      opacity: 1;
+    }
+  }
+
+  .notify-name {
+    font-weight: 400;
+  }
+
+  .notify-message {
+    color: black;
+    opacity: 0.7;
+  }
+
+  .notify-link {
+    font-weight: 500;
+  }
+}
+
+.notify-item.disabled {
+  p {
+    &::before {
+      background: var(--gray-200);
+    }
+  }
+
+  .notify-item-text {
+    color: var(--gray-800) !important;
+
+    span {
+      opacity: 0.7;
+    }
+  }
+}
+
+.notify-all-read {
+  img {
+    margin-right: 4px;
+  }
+}
+
+.notify-view-all {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.blue-link {
+  color: var(--blue-600);
+  cursor: pointer;
+}
